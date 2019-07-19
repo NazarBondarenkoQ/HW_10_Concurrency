@@ -11,8 +11,8 @@ public class HttpServerThread extends Thread {
         }
         for (int i = 0; i < 5; i++) {
             System.out.println("Server receives " + HttpMethods.GET + " request. On thread: "
-                    + Thread.currentThread() + "\n" +
-                    "Server receives " + HttpMethods.POST + " request. On thread: " + Thread.currentThread());
+                    + Thread.currentThread().getName() + "\n" +
+                    "Server receives " + HttpMethods.POST + " request. On thread: " + Thread.currentThread().getName());
         }
     }
 }

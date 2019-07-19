@@ -1,5 +1,6 @@
 package main.java.httpserver;
 
+
 public class Main {
     public static void main(String[] args) {
         HttpServerThread httpServerThread = new HttpServerThread();
@@ -14,8 +15,8 @@ public class Main {
                 e.printStackTrace();
             }
             System.out.println("Server receives " + HttpMethods.DELETE + " request. On thread:"
-                    + Thread.currentThread() + "\n" +
-                    "Server receives " + HttpMethods.PUT + " request. On thread: " + Thread.currentThread());
+                    + Thread.currentThread().getName() + "\n" +
+                    "Server receives " + HttpMethods.PUT + " request. On thread: " + Thread.currentThread().getName());
         }
     }
 }
