@@ -2,14 +2,15 @@ package main.java.fireDepartment;
 
 public class Main {
 
+    private static final MyThread myThread = new MyThread();
+
     public static void main(String[] args) {
 
         Firefighter firefighter = new Firefighter("Jack");
         Firefighter firefighter1 = new Firefighter("Tom");
         Firefighter firefighter2 = new Firefighter("Cain");
-        MyThread myThread = new MyThread();
-        myThread.start();
-        synchronized (myThread) {
+        Main.myThread.start();
+        synchronized (Main.myThread) {
             try {
                 myThread.wait();
             } catch (InterruptedException e) {
